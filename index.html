@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mind Logic</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="sky3d">
+<div class="sun"></div>
+
+<div class="cloud" style="top:120px"></div>
+<div class="cloud" style="top:260px"></div>
+<div class="cloud" style="top:420px"></div>
+
+<div class="bird bird1">🐦</div>
+<div class="bird bird2">🐦</div>
+</div>
+
+<h1 class="title">Mind Logic</h1>
+
+<div class="card" id="start">
+<h2>Enter Your Name</h2>
+<input id="name" placeholder="Your name">
+<button onclick="startGame()">Start</button>
+</div>
+
+<div id="desc" class="hidden descPage">
+<h1>Description</h1>
+
+<p>
+Welcome to <b>Mind Logic</b>! This interactive game is designed to test your
+critical thinking, reasoning skills, and understanding of different logic concepts.
+</p>
+
+<p>
+You will be given <b>4 different topics</b>: Probability, Group Theory,
+Predicate Logic, and Counting Theory.
+Each topic contains <b>20 questions</b>, but only <b>5 random questions</b>
+will appear every time you play.
+</p>
+
+<p>
+This means that each game is unique the questions will shuffle,
+so you need to stay sharp and think carefully before answering.
+</p>
+
+<p>
+Once you answer all topics, your final score will be shown.
+To pass the game, you must get at least <b>70%</b>.
+If you pass, you can continue otherwise, you can try again and improve your score.
+</p>
+
+<button onclick="showTopics()">Play</button>
+</div>
+
+<div id="topics" class="hidden">
+<h2>Select Topic</h2>
+
+<div class="topics">
+<div class="topic" onclick="playTopic('prob',this)">Probability</div>
+<div class="topic" onclick="playTopic('group',this)">Group Theory</div>
+<div class="topic" onclick="playTopic('pred',this)">Predicate Logic</div>
+<div class="topic" onclick="playTopic('count',this)">Counting Theory</div>
+</div>
+</div>
+
+<div id="quiz" class="hidden quiz">
+<h2 id="question"></h2>
+<div id="answers" class="answers"></div>
+</div>
+
+<div id="result" class="hidden resultBox">
+<h2 id="final"></h2>
+<button onclick="location.reload()">Try Again</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
